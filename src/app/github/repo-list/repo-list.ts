@@ -26,4 +26,5 @@ export class RepoList implements OnInit {
       }
     });
   }
+
 }

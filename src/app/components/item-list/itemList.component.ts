@@ -18,8 +18,7 @@ import {Logger} from 'angular2-logger/core';
         </ul>
     </div>
     `,
-    styles: [`
-  `],
+    styles: [``],
     providers: [ItemListService, Logger],
     directives: [ItemComponent]
 })
