@@ -4,33 +4,31 @@ import { Logger } from 'angular2-logger/core';
 
 @Component({
     selector: 'menu',
-    template: `
-      <nav>
-          <ul>
-            <li><a [routerLink]="['/']">Home</a></li>
-            <li><a [routerLink]="['/items']">ItemList</a></li>
-            <li><a [routerLink]="['/about']">About</a></li>
-            <li><a [routerLink]="['/github', 'angular']">Github Repos</a></li>
-          </ul>
-      </nav>
-    `,
+    templateUrl: 'menu.component.html',
     directives: [],
     providers: [Logger],
-    styleUrls: ['./menu.component.css'],
+    styleUrls: ['menu.component.css'],
     pipes: []
 })
-
 export class MenuComponent implements OnInit, OnDestroy {
 
-    constructor(public logger: Logger) {
+    constructor(public logger: Logger) { }
 
-    }
+    private menuWidth: number;
+    private mobileMenu: string;
 
     ngOnInit() {
-        this.logger.debug('ItemListComponent init...');
+        this.menuWidth = window.innerWidth;
+        this.logger.debug('MenuComponent init for window: ', this.menuWidth);
+        this.mobileMenu = this.menuWidth < 768 ? 'small' : 'medium';
     }
 
-    ngOnDestroy() {
+    ngOnDestroy() { }
+
+    onResize(event) {
+        this.logger.info('resize: ', event.target.window.innerWidth);
+        this.menuWidth = event.target.window.innerWidth;
+        this.mobileMenu = this.menuWidth < 800 ? 'small' : 'medium';
     }
 
 }
