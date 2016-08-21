@@ -7,8 +7,13 @@ import {RepoBrowser} from './github/repo-browser/repo-browser';
 import {RepoList} from './github/repo-list/repo-list';
 import {RepoDetail} from './github/repo-detail/repo-detail';
 
+
+import {PagesRoutes} from "./pages/pages.routes";
+
 const routes: RouterConfig = [
+  ...PagesRoutes,
   { path: '', redirectTo: 'home', terminal: true },
+  {path: 'dashboard', redirectTo: '/pages/dashboard'},
   { path: 'home', component: Home },
   { path: 'items', component: ItemListComponent },
   { path: 'about', component: About },
