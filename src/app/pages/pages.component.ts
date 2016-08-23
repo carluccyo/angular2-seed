@@ -4,7 +4,9 @@ import {Component, ViewEncapsulation} from '@angular/core';
   selector: 'pages',
   styles: [],
   directives: [],
-  template: `<router-outlet></router-outlet>`
+  template: `
+  <router-outlet></router-outlet>
+  `
 })
 export class Pages {
 
