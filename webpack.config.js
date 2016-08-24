@@ -1,14 +1,20 @@
 var webpack = require('webpack');
 var path = require('path');
 
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 // Webpack Config
 var webpackConfig = {
+
   entry: {
     'polyfills': './src/polyfills.browser.ts',
-    'vendor':    './src/vendor.browser.ts',
-    'main':       './src/main.browser.ts',
+    'vendor': './src/vendor.browser.ts',
+    'main': './src/main.browser.ts',
+    'vendor-style': './src/vendor-style.ts',
+    'app-style': './src/app-style.ts',
   },
+
+  cache: true,
 
   output: {
     path: './dist',
@@ -16,15 +22,42 @@ var webpackConfig = {
 
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(true),
-    new webpack.optimize.CommonsChunkPlugin({ name: ['main', 'vendor', 'polyfills'], minChunks: Infinity }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: ['main', 'vendor', 'polyfills'],
+      minChunks: Infinity
+    }),
+    new ExtractTextPlugin("[name].css"),
+    new webpack.optimize.DedupePlugin()
   ],
 
   module: {
     loaders: [
       // .ts files for TypeScript
-      { test: /\.ts$/, loaders: ['awesome-typescript-loader', 'angular2-template-loader'] },
-      { test: /\.css$/, loaders: ['to-string-loader', 'css-loader'] },
-      { test: /\.html$/, loader: 'raw-loader' }
+      {
+        test: /\.ts$/,
+        loader: 'ts-loader'
+      }, {
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract("style-loader", "css-loader")
+      }, {
+        test: /\.less$/,
+        loader: ExtractTextPlugin.extract("style-loader", "css-loader!less-loader")
+      }, {
+        test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
+        loader: "file"
+      }, {
+        test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
+        loader: "url?prefix=font/&limit=5000"
+      }, {
+        test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
+        loader: "url?limit=10000&mimetype=application/octet-stream"
+      }, {
+        test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+        loader: "url?limit=10000&mimetype=image/svg+xml"
+      }, {
+        test: /\.html$/,
+        loader: 'raw-loader'
+      }
     ]
   }
 
@@ -43,13 +76,16 @@ var defaultConfig = {
   },
 
   resolve: {
-    root: [ path.join(__dirname, 'src') ],
+    root: [path.join(__dirname, 'src')],
     extensions: ['', '.ts', '.js']
   },
 
   devServer: {
     historyApiFallback: true,
-    watchOptions: { aggregateTimeout: 300, poll: 1000 }
+    watchOptions: {
+      aggregateTimeout: 300,
+      poll: 1000
+    }
   },
 
   node: {
