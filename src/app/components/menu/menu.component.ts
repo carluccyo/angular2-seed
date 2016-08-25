@@ -1,13 +1,14 @@
 import { Component, EventEmitter, Input, Output, OnInit, OnDestroy } from '@angular/core';
 import { Logger } from 'angular2-logger/core';
 
+const STYLES  = require('!raw!less!./menu.component.less');
 
 @Component({
     selector: 'menu',
-    templateUrl: 'menu.component.html',
+    template: require('to-string!./menu.component.html'),
     directives: [],
     providers: [Logger],
-    styleUrls: ['menu.component.css'],
+    styleUrls: [STYLES],
     pipes: []
 })
 export class MenuComponent implements OnInit, OnDestroy {

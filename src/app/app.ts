@@ -8,7 +8,7 @@ import { MenuComponent } from './components/menu/menu.component';
     pipes: [],
     providers: [Logger],
     directives: [ROUTER_DIRECTIVES, MenuComponent],
-    templateUrl: './app.html',
+    template: require('to-string!./app.html'),
 })
 export class App implements OnInit {
 
