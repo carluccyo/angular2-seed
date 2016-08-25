@@ -1,14 +1,14 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 
-const STYLES  = require('!raw!less!./about.less');
+const STYLES = require('!raw!less!./about.less');
 
 @Component({
-  selector: 'about',
-  pipes: [],
-  providers: [],
-  directives: [],
-  styleUrls: [STYLES],
-  templateUrl: require('to-string!./about.html')
+    selector: 'about',
+    pipes: [],
+    providers: [],
+    directives: [],
+    styleUrls: [STYLES],
+    template: require('to-string!./about.html')
 })
 export class About {
 }
