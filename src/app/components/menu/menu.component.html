@@ -1,21 +1,21 @@
 <div (window:resize)="onResize($event)">
 
-    <div [ngSwitch]="mobileMenu">
+  <div [ngSwitch]="mobileMenu">
 
-      <nav *ngSwitchCase="'medium'">
+    <nav *ngSwitchCase="'medium'">
 
-          <ul class="nav nav-tabs nav-justified">
-            <li role="presentation"><a [routerLink]="['/']">Home</a></li>
-            <li role="presentation"><a [routerLink]="['/items']">ItemList</a></li>
-            <li role="presentation"><a [routerLink]="['/pages/dashboard']">Dashboard</a></li>
-            <li role="presentation"><a [routerLink]="['/about']">About</a></li>
-            <li role="presentation"><a [routerLink]="['/github', 'angular']">Github Repos</a></li>
-          </ul>
+      <ul class="nav nav-tabs nav-justified">
+        <li role="presentation"><a [routerLink]="['/']">Home</a></li>
+        <li role="presentation"><a [routerLink]="['/items']">ItemList</a></li>
+        <li role="presentation"><a [routerLink]="['/pages/dashboard']">Dashboard</a></li>
+        <li role="presentation"><a [routerLink]="['/about']">About</a></li>
+        <li role="presentation"><a [routerLink]="['/github', 'angular']">Github Repos</a></li>
+      </ul>
 
-      </nav>
+    </nav>
 
-      <nav *ngSwitchCase="'small'">
-          <!-- <ul>
+    <nav *ngSwitchCase="'small'">
+      <!-- <ul>
             <li><a [routerLink]="['/items']">ItemList</a></li>
             <li><a [routerLink]="['/about']">About</a></li>
           </ul> -->
@@ -23,7 +23,7 @@
 
 
 
-      </nav>
+    </nav>
 
-    </div>
+  </div>
 </div>
