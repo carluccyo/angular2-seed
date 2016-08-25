@@ -6,7 +6,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
     directives: [],
     encapsulation: ViewEncapsulation.None,
     styles: [],
-    templateUrl: 'dashboard.html'
+    template: require('to-string!./dashboard.html')
 })
 export class Dashboard {
 
