@@ -3,13 +3,15 @@ import {Github} from '../shared/github';
 import {Observable} from 'rxjs/Observable';
 import {ROUTER_DIRECTIVES, ActivatedRoute} from '@angular/router';
 
+const STYLES = require('!raw!less!./repo-list.less');
+
 @Component({
   selector: 'repo-list',
   pipes: [],
   providers: [],
   directives: [ ROUTER_DIRECTIVES ],
-  styleUrls: ['./repo-list.css'],
-  templateUrl: './repo-list.html',
+  styleUrls: [STYLES],
+  template: require('to-string!./repo-list.html'),
 })
 export class RepoList implements OnInit {
   org: string;

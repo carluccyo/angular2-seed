@@ -2,13 +2,15 @@ import { Component } from '@angular/core';
 import { Router, ROUTER_DIRECTIVES } from '@angular/router';
 import { Github } from '../shared/github';
 
+const STYLES = require('!raw!less!./repo-browser.less');
+
 @Component({
   selector: 'repo-browser',
   pipes: [],
   providers: [ Github ],
   directives: [ ROUTER_DIRECTIVES ],
-  templateUrl: './repo-browser.html',
-  styleUrls: ['./repo-browser.css']
+  template: require('to-string!./repo-browser.html'),
+  styleUrls: [STYLES]
 })
 export class RepoBrowser {
 

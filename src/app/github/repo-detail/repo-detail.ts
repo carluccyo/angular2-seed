@@ -2,13 +2,15 @@ import {Component, OnInit} from '@angular/core';
 import {ROUTER_DIRECTIVES, ActivatedRoute, Router} from '@angular/router';
 import {Github} from '../shared/github';
 
+const STYLES = require('!raw!less!./repo-detail.less')
+
 @Component({
   selector: 'repo-detail',
   pipes: [],
   providers: [],
   directives: [ROUTER_DIRECTIVES],
-  styleUrls: ['./repo-detail.css'],
-  templateUrl: './repo-detail.html'
+  styleUrls: [STYLES],
+  template: require('to-string!./repo-detail.html')
 })
 export class RepoDetail implements OnInit {
   private org:string;
