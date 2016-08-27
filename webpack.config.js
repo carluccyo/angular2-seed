@@ -27,6 +27,10 @@ var webpackConfig = {
       minChunks: Infinity
     }),
     new ExtractTextPlugin("[name].css"),
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery"
+    }),
     new webpack.optimize.DedupePlugin()
   ],
 
