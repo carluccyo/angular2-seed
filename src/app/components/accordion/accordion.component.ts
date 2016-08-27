@@ -10,6 +10,7 @@ import { Component, Input, OnDestroy } from '@angular/core';
     }
 })
 export class Accordion {
+
     groups: Array<AccordionGroup> = [];
 
     addGroup(group: AccordionGroup): void {
@@ -30,6 +31,7 @@ export class Accordion {
             this.groups.splice(index, 1);
         }
     }
+
 }
 
 @Component({
