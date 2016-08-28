@@ -1,15 +1,16 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 
+import { ArticlesGridComponent } from '../components/articles-grid/articlesGrid.component';
 
-const STYLES  = require('!raw!less!./home.less');
+const STYLES = require('!raw!less!./home.less');
 
 @Component({
-  selector: 'home',
-  pipes: [],
-  providers: [],
-  directives: [],
-  styleUrls: [STYLES],
-  template: require('to-string!./home.html')
+    selector: 'home',
+    pipes: [],
+    providers: [],
+    directives: [ArticlesGridComponent],
+    styleUrls: [STYLES],
+    template: require('to-string!./home.html')
 })
 export class Home {
 }
