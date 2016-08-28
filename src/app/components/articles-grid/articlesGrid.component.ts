@@ -1,9 +1,16 @@
 import { Component, EventEmitter, Input, Output, OnInit, OnDestroy } from '@angular/core';
+import { ArticlesHorizontalComponent } from './articles-horizontal.component';
+import { TopNewsBoxComponent } from './top-news-box.component';
+import { ArticlesVerticalComponent } from './articles-vertical.component';
 
 @Component({
     selector: 'articles-grid',
-    template: require('to-string!./articles-grid.component.html'),
-    directives: [],
+    template: `
+    <articles-horizontal></articles-horizontal>
+    <top-news-box></top-news-box>
+    <articles-vertical></articles-vertical>
+    `,
+    directives: [ArticlesHorizontalComponent, TopNewsBoxComponent, ArticlesVerticalComponent],
     providers: [],
     styleUrls: [],
     pipes: []
@@ -11,10 +18,10 @@ import { Component, EventEmitter, Input, Output, OnInit, OnDestroy } from '@angu
 
 export class ArticlesGridComponent implements OnInit, OnDestroy {
 
-  constructor() {}
+    constructor() { }
 
-  ngOnInit() {}
+    ngOnInit() { }
 
-  ngOnDestroy() {}
+    ngOnDestroy() { }
 
 }
