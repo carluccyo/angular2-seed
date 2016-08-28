@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-
 import { ArticlesGridComponent } from '../components/articles-grid/articlesGrid.component';
+
 
 const STYLES = require('!raw!less!./home.less');
 
@@ -10,7 +10,8 @@ const STYLES = require('!raw!less!./home.less');
     providers: [],
     directives: [ArticlesGridComponent],
     styleUrls: [STYLES],
-    template: require('to-string!./home.html')
+    template: `
+      <articles-grid></articles-grid>
+    `
 })
-export class Home {
-}
+export class Home {}

@@ -6,9 +6,9 @@ import { ArticlesVerticalComponent } from './articles-vertical.component';
 @Component({
     selector: 'articles-grid',
     template: `
-    <articles-horizontal></articles-horizontal>
-    <top-news-box></top-news-box>
-    <articles-vertical></articles-vertical>
+      <articles-horizontal></articles-horizontal>
+      <top-news-box></top-news-box>
+      <articles-vertical></articles-vertical>
     `,
     directives: [ArticlesHorizontalComponent, TopNewsBoxComponent, ArticlesVerticalComponent],
     providers: [],
