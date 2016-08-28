@@ -9,9 +9,9 @@ import { Article } from './article.model';
 
     <div class="row">
 
-      <div class="col-sm-3" *ngFor="let article of articles" >
+      <div class="col-sm-3 habox-wrapp" *ngFor="let article of articles" >
 
-        <div class="thumbnail text-center">
+        <div class="habox text-center">
             <img src="{{article.mediaUrl}}" alt="" class="img-responsive">
             <div class="caption">
                 <p>{{article.title}}</p>
@@ -26,7 +26,11 @@ import { Article } from './article.model';
     providers: [ArticlesHorizontalService],
     styles: [`
 
-      .thumbnail {
+      .habox-wrapp{
+        padding: 2px ;
+      }
+
+      .habox {
           position: relative;
       }
 
