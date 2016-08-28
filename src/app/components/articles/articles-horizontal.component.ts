@@ -1,39 +1,60 @@
 import { Component, EventEmitter, Input, Output, OnInit, OnDestroy } from '@angular/core';
+import { ArticlesHorizontalService } from './articles-horizontal.service';
+import { Logger } from 'angular2-logger/core';
+import { Article } from './article.model';
 
 @Component({
     selector: 'articles-horizontal',
     template: `
+
     <div class="row">
 
-      <h3>articles-horizontal</h3>
+      <div class="col-sm-3" *ngFor="let article of articles" >
 
-      <div class="col-sm-3">
-        <img src="http://placehold.it/300x200" class="img-responsive float-left">
-      </div>
-      <div class="col-sm-3">
-        <img src="http://placehold.it/300x200" class="img-responsive float-left">
-      </div>
-      <div class="col-sm-3">
-        <img src="http://placehold.it/300x200" class="img-responsive float-left">
-      </div>
-      <div class="col-sm-3">
-        <img src="http://placehold.it/300x200" class="img-responsive float-left">
+        <div class="thumbnail text-center">
+            <img src="{{article.mediaUrl}}" alt="" class="img-responsive">
+            <div class="caption">
+                <p>{{article.title}}</p>
+            </div>
+        </div>
+
       </div>
 
     </div>
     `,
     directives: [],
-    providers: [],
-    styleUrls: [],
+    providers: [ArticlesHorizontalService],
+    styles: [`
+
+      .thumbnail {
+          position: relative;
+      }
+
+      .caption {
+          position: absolute;
+          bottom: 1%;
+          left: 0;
+          width: 100%;
+      }
+
+      `],
     pipes: []
 })
 
 export class ArticlesHorizontalComponent implements OnInit, OnDestroy {
 
-    constructor() { }
+    articles: Article[];
 
-    ngOnInit() { }
+    constructor(private articlesHorizontalService: ArticlesHorizontalService, public logger: Logger) { }
 
-    ngOnDestroy() { }
+    ngOnInit() {
+      this.getArticles();
+    }
+
+    ngOnDestroy() {}
+
+    getArticles() {
+        this.articlesHorizontalService.getArticles().then(articles => this.articles = articles);
+    }
 
 }
