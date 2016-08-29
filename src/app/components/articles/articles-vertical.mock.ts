@@ -1,0 +1,14 @@
+import { Article } from './article.model';
+
+export const ARTICLES: Article[] = [
+    { id: 1, title: 'horizontal title1 mock', description: 'horizontal-description1', mediaUrl: 'https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97250&w=350&h=250' },
+    { id: 2, title: 'horizontal title2 mock', description: 'horizontal-description2', mediaUrl: 'https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97250&w=350&h=250' },
+    { id: 3, title: 'horizontal title3 mock', description: 'horizontal-description3', mediaUrl: 'https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97250&w=350&h=250' },
+    { id: 4, title: 'horizontal title4 mock', description: 'horizontal-description4', mediaUrl: 'https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97250&w=350&h=250' },
+    { id: 5, title: 'horizontal title5 mock', description: 'horizontal-description5', mediaUrl: 'https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97250&w=350&h=250' },
+    { id: 6, title: 'horizontal title6 mock', description: 'horizontal-description6', mediaUrl: 'https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97250&w=350&h=250' },
+    { id: 7, title: 'horizontal title7 mock', description: 'horizontal-description7', mediaUrl: 'https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97250&w=350&h=250' },
+    { id: 8, title: 'horizontal title8 mock', description: 'horizontal-description8', mediaUrl: 'https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97250&w=350&h=250' },
+    { id: 9, title: 'horizontal title9 mock', description: 'horizontal-description9', mediaUrl: 'https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97250&w=350&h=250' },
+    { id: 10, title: 'horizontal title10 mock', description: 'horizontal-description10', mediaUrl: 'https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97250&w=350&h=250' }
+];
