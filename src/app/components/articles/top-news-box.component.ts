@@ -3,28 +3,34 @@ import { Component, EventEmitter, Input, Output, OnInit, OnDestroy } from '@angu
 @Component({
     selector: 'top-news-box',
     template: `
-    <div class="row">
+    <div class="row m-t">
 
       <div class="col-sm-8">
-        <img src="http://placehold.it/900x600" class="img-responsive">
+        <div class="row p-sm">
+          <img src="http://placehold.it/900x600" class="img-responsive">
+        </div>
       </div>
 
       <div class="col-sm-4">
-        <div class="row">
+
+        <div class="row p-sm">
           <div class="col-sm-12">
             <img src="http://placehold.it/300x200" class="img-responsive float-left">
           </div>
         </div>
-        <div class="row">
+
+        <div class="row p-sm">
           <div class="col-sm-12">
             <img src="http://placehold.it/300x200" class="img-responsive float-left">
           </div>
         </div>
-        <div class="row">
+
+        <div class="row p-sm">
           <div class="col-sm-12">
             <img src="http://placehold.it/300x200" class="img-responsive float-left">
           </div>
         </div>
+
       </div>
 
     </div>
@@ -32,6 +38,7 @@ import { Component, EventEmitter, Input, Output, OnInit, OnDestroy } from '@angu
     directives: [],
     providers: [],
     styleUrls: [],
+    styles: [' .p-sm { padding: 2px } .m-t{ margin-top: 5px}'],
     pipes: []
 })
 

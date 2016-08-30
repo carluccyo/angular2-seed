@@ -7,20 +7,21 @@ import { Article } from '../article.model';
     selector: 'articles-horizontal',
     template: `
 
-    <div class="row">
+      <div class="row">
 
-      <div class="col-sm-3 habox-wrapp" *ngFor="let article of articles" >
+        <div class="col-sm-2 habox-wrapp" *ngFor="let article of articles" >
 
-        <div class="habox text-center">
-            <img src="{{article.mediaUrl}}" alt="" class="img-responsive">
-            <div class="caption">
-                <p>{{article.title}}</p>
-            </div>
+          <div class="habox text-center">
+              <img src="{{article.mediaUrl}}" alt="" class="img-responsive">
+              <div class="caption">
+                  <p>{{article.title}}</p>
+              </div>
+          </div>
+
         </div>
 
       </div>
 
-    </div>
     `,
     directives: [],
     providers: [ArticlesHorizontalService],
