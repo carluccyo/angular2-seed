@@ -1,4 +1,4 @@
-import { Article } from './article.model';
+import { Article } from '../article.model';
 
 export const ARTICLES: Article[] = [
     { id: 1, title: 'horizontal title1 mock', description: 'horizontal-description1', mediaUrl: 'https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97250&w=350&h=250' },

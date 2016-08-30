@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output, OnInit, OnDestroy } from '@angular/core';
-import { ArticlesHorizontalComponent } from './articles-horizontal.component';
+import { ArticlesHorizontalComponent } from './horizontal/articles-horizontal.component';
 import { TopNewsBoxComponent } from './top-news-box.component';
 import { ArticlesVerticalComponent } from './articles-vertical.component';
 
@@ -15,7 +15,6 @@ import { ArticlesVerticalComponent } from './articles-vertical.component';
     styleUrls: [],
     pipes: []
 })
-
 export class ArticlesGridComponent implements OnInit, OnDestroy {
 
     constructor() { }

@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, Output, OnInit, OnDestroy } from '@angular/core';
 import { ArticlesHorizontalService } from './articles-horizontal.service';
 import { Logger } from 'angular2-logger/core';
-import { Article } from './article.model';
+import { Article } from '../article.model';
 
 @Component({
     selector: 'articles-horizontal',
