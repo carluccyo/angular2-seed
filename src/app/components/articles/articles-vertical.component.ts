@@ -7,14 +7,14 @@ import { ArticleVerticalComponent } from './article-vertical.component';
 @Component({
     selector: 'articles-vertical',
     template: `
-          <div class="row m-t" *ngFor="let article of articles">
+          <div class="row m-t article-box" *ngFor="let article of articles">
             <article-vertical [article] = "article" ></article-vertical>
           </div>
     `,
     directives: [ArticleVerticalComponent],
     providers: [ArticlesVerticalService],
     styleUrls: [],
-    styles: [' .m-t { margin-top: 5px }'],
+    styles: ['.m-t { margin-top: 5px } .article-box { border-top : 1px solid #ebebeb; padding-top : 10px; padding-bottom : 10px }'],
     pipes: []
 })
 

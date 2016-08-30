@@ -5,8 +5,6 @@ import { Component, EventEmitter, Input, Output, OnInit, OnDestroy } from '@angu
     template: `
     <div class="row">
 
-      <h3>top-news-box</h3>
-
       <div class="col-sm-8">
         <img src="http://placehold.it/900x600" class="img-responsive">
       </div>
