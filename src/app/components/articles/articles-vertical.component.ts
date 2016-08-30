@@ -2,25 +2,19 @@ import { Component, EventEmitter, Input, Output, OnInit, OnDestroy } from '@angu
 import { ArticlesVerticalService } from './articles-vertical.service';
 import { Article } from './article.model';
 import { Logger } from 'angular2-logger/core';
+import { ArticleVerticalComponent } from './article-vertical.component';
 
 @Component({
     selector: 'articles-vertical',
     template: `
           <div class="row m-t" *ngFor="let article of articles">
-            <div class="col-sm-4">
-              <img src="{{article.mediaUrl}}" class="img-responsive float-left">
-            </div>
-            <div class="col-sm-8">
-              <h5>{{article.title}}</h5>
-              <h2>{{article.title}}</h2>
-              <p>{{article.description}}</p>
-            </div>
+            <article-vertical [article] = "article" ></article-vertical>
           </div>
     `,
-    directives: [],
+    directives: [ArticleVerticalComponent],
     providers: [ArticlesVerticalService],
     styleUrls: [],
-    styles: [' .m-t { margin-top: 10px }'],
+    styles: [' .m-t { margin-top: 5px }'],
     pipes: []
 })
 
