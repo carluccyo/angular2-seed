@@ -10,14 +10,14 @@ import { Article } from '../article.model';
       <div class="row">
 
         <div class="col-sm-2 habox-wrapp" *ngFor="let article of articles" >
-
-          <div class="habox text-center">
-              <img src="{{article.mediaUrl}}" alt="" class="img-responsive">
-              <div class="caption">
-                  <p>{{article.title}}</p>
-              </div>
-          </div>
-
+          <a itemprop="url" [routerLink]="['/article', article.id]">
+            <div class="habox text-center">
+                <img src="{{article.mediaUrl}}" alt="" class="img-responsive">
+                <div class="caption">
+                    <p>{{article.title}}</p>
+                </div>
+            </div>
+          </a>
         </div>
 
       </div>
@@ -27,7 +27,7 @@ import { Article } from '../article.model';
     providers: [ArticlesHorizontalService],
     styles: [`
 
-      .habox-wrapp{
+      .habox-wrapp {
         padding: 2px ;
       }
 
@@ -53,10 +53,10 @@ export class ArticlesHorizontalComponent implements OnInit, OnDestroy {
     constructor(private articlesHorizontalService: ArticlesHorizontalService, public logger: Logger) { }
 
     ngOnInit() {
-      this.getArticles();
+        this.getArticles();
     }
 
-    ngOnDestroy() {}
+    ngOnDestroy() { }
 
     getArticles() {
         this.articlesHorizontalService.getArticles().then(articles => this.articles = articles);
