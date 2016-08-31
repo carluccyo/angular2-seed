@@ -8,10 +8,12 @@ import {RepoList} from './github/repo-list/repo-list';
 import {RepoDetail} from './github/repo-detail/repo-detail';
 
 
-import {PagesRoutes} from "./pages/pages.routes";
+import {PagesRoutes} from './pages/pages.routes';
+import {ArticlesRoutes} from './components/articles/articles.routes.ts'
 
 const routes: RouterConfig = [
   ...PagesRoutes,
+  ...ArticlesRoutes,
   { path: '', redirectTo: 'home', terminal: true },
   {path: 'dashboard', redirectTo: '/pages/dashboard'},
   { path: 'home', component: Home },

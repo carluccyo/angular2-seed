@@ -3,6 +3,8 @@ import { ArticlesHorizontalService } from './articles-horizontal.service';
 import { Logger } from 'angular2-logger/core';
 import { Article } from '../article.model';
 
+import {ROUTER_DIRECTIVES, ActivatedRoute} from '@angular/router';
+
 @Component({
     selector: 'articles-horizontal',
     template: `
