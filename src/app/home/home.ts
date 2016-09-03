@@ -5,8 +5,6 @@ const STYLES = require('!raw!less!./home.less');
 
 @Component({
     selector: 'home',
-    pipes: [],
-    providers: [],
     directives: [ArticlesGridComponent],
     styleUrls: [STYLES],
     template: `<articles-grid></articles-grid>`
