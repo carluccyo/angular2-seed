@@ -17,10 +17,7 @@ import { VerticalBoxComponent} from './vertical-box.component';
         </div>
       </div>
     `,
-    directives: [VerticalBoxComponent],
-    providers: [],
-    styleUrls: [],
-    pipes: []
+    directives: [VerticalBoxComponent]
 })
 
 export class ArticleDetailComponent implements OnInit, OnDestroy {

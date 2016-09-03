@@ -10,8 +10,6 @@ import { Item } from './item.model'
       <div><span class="badge">{{item.id}}</span>{{item.description}}</div>
     </article>
     `,
-    directives: [],
-    providers: [],
     styles: [`
     .item-detail {
     }
@@ -36,8 +34,7 @@ import { Item } from './item.model'
       margin-right: .8em;
       border-radius: 4px 0 0 4px;
     }
-  `],
-    pipes: []
+  `]
 })
 
 export class ItemComponent implements OnInit, OnDestroy {

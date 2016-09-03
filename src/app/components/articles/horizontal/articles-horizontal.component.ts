@@ -25,7 +25,6 @@ import {ROUTER_DIRECTIVES, ActivatedRoute} from '@angular/router';
       </div>
 
     `,
-    directives: [],
     providers: [ArticlesHorizontalService],
     styles: [`
 
@@ -44,8 +43,7 @@ import {ROUTER_DIRECTIVES, ActivatedRoute} from '@angular/router';
           width: 100%;
       }
 
-      `],
-    pipes: []
+      `]
 })
 
 export class ArticlesHorizontalComponent implements OnInit, OnDestroy {

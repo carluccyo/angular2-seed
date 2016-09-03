@@ -15,12 +15,7 @@ import { Logger } from 'angular2-logger/core';
               <p>{{article.description}}</p>
             </div>
           </div>
-    `,
-    directives: [],
-    providers: [],
-    styleUrls: [],
-    styles: [],
-    pipes: []
+    `
 })
 
 export class ArticleVerticalComponent implements OnInit, OnDestroy {

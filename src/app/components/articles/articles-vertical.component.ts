@@ -13,9 +13,7 @@ import { ArticleVerticalComponent } from './article-vertical.component';
     `,
     directives: [ArticleVerticalComponent],
     providers: [ArticlesVerticalService],
-    styleUrls: [],
-    styles: ['.m-t { margin-top: 5px } .article-box { border-top : 1px solid #ebebeb; padding-top : 10px; padding-bottom : 10px }'],
-    pipes: []
+    styles: ['.m-t { margin-top: 5px } .article-box { border-top : 1px solid #ebebeb; padding-top : 10px; padding-bottom : 10px }']
 })
 
 export class ArticlesVerticalComponent implements OnInit, OnDestroy {

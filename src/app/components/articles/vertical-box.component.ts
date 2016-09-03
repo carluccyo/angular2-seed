@@ -21,11 +21,7 @@ import { Component, EventEmitter, Input, Output, OnInit, OnDestroy } from '@angu
         </div>
       </div>
     `,
-    directives: [],
-    providers: [],
-    styleUrls: [],
-    styles: [' .p-sm { padding: 2px } .m-t{ margin-top: 5px}'],
-    pipes: []
+    styles: [' .p-sm { padding: 2px } .m-t{ margin-top: 5px}']
 })
 
 export class VerticalBoxComponent implements OnInit, OnDestroy {

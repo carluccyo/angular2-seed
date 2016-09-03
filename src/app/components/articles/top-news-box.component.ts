@@ -35,11 +35,7 @@ import { Component, EventEmitter, Input, Output, OnInit, OnDestroy } from '@angu
 
     </div>
     `,
-    directives: [],
-    providers: [],
-    styleUrls: [],
-    styles: [' .p-sm { padding: 2px } .m-t{ margin-top: 5px}'],
-    pipes: []
+    styles: [' .p-sm { padding: 2px } .m-t{ margin-top: 5px}']
 })
 
 export class TopNewsBoxComponent implements OnInit, OnDestroy {

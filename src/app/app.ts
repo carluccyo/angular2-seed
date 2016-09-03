@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { ROUTER_DIRECTIVES } from '@angular/router';
+
 import { Logger, Level } from 'angular2-logger/core';
 import { MenuComponent } from './components/menu/menu.component';
 
 @Component({
     selector: 'app',
-    pipes: [],
     providers: [Logger],
-    directives: [ROUTER_DIRECTIVES, MenuComponent],
+    directives: [MenuComponent],
     template: require('to-string!./app.html'),
 })
 export class App implements OnInit {

@@ -6,8 +6,6 @@ const STYLES = require('!raw!less!./repo-detail.less')
 
 @Component({
   selector: 'repo-detail',
-  pipes: [],
-  providers: [],
   directives: [ROUTER_DIRECTIVES],
   styleUrls: [STYLES],
   template: require('to-string!./repo-detail.html')

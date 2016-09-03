@@ -6,10 +6,8 @@ const STYLES  = require('!raw!less!./menu.component.less');
 @Component({
     selector: 'menu',
     template: require('to-string!./menu.component.html'),
-    directives: [],
     providers: [Logger],
-    styleUrls: [STYLES],
-    pipes: []
+    styleUrls: [STYLES]
 })
 export class MenuComponent implements OnInit, OnDestroy {
 

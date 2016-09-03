@@ -6,7 +6,6 @@ const STYLES = require('!raw!less!./repo-browser.less');
 
 @Component({
   selector: 'repo-browser',
-  pipes: [],
   providers: [ Github ],
   directives: [ ROUTER_DIRECTIVES ],
   template: require('to-string!./repo-browser.html'),

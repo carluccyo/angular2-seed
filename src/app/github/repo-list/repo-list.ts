@@ -7,8 +7,6 @@ const STYLES = require('!raw!less!./repo-list.less');
 
 @Component({
   selector: 'repo-list',
-  pipes: [],
-  providers: [],
   directives: [ ROUTER_DIRECTIVES ],
   styleUrls: [STYLES],
   template: require('to-string!./repo-list.html'),
