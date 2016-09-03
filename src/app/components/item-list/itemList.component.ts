@@ -18,8 +18,7 @@ import {Logger} from 'angular2-logger/core';
         </ul>
     </div>
     `,
-    providers: [ItemListService, Logger],
-    directives: [ItemComponent]
+    providers: [ItemListService, Logger]
 })
 export class ItemListComponent implements OnInit {
 

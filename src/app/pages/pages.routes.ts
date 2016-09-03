@@ -1,11 +1,11 @@
-import { RouterConfig } from '@angular/router';
+import { Routes } from '@angular/router';
 import { Pages } from './pages.component';
 import { Ui } from './ui/ui.component';
 import { Dashboard } from './dashboard/dashboard.component';
 import { Buttons } from './ui/buttons/buttons.component';
 
 //noinspection TypeScriptValidateTypes
-export const PagesRoutes: RouterConfig = [
+export const PagesRoutes: Routes = [
     {
         path: 'pages',
         component: Pages,

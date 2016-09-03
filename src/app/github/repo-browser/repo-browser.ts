@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router, ROUTER_DIRECTIVES } from '@angular/router';
+import { Router } from '@angular/router';
 import { Github } from '../shared/github';
 
 const STYLES = require('!raw!less!./repo-browser.less');
@@ -7,7 +7,6 @@ const STYLES = require('!raw!less!./repo-browser.less');
 @Component({
   selector: 'repo-browser',
   providers: [ Github ],
-  directives: [ ROUTER_DIRECTIVES ],
   template: require('to-string!./repo-browser.html'),
   styleUrls: [STYLES]
 })

@@ -1,7 +1,7 @@
-import { RouterConfig } from '@angular/router';
+import { Routes } from '@angular/router';
 import { ArticleDetailComponent } from './article.detail.component';
 
-//noinspection TypeScriptValidateTypes
-export const ArticlesRoutes: RouterConfig = [
+
+export const ArticlesRoutes: Routes = [
     { path: 'article/:id', component: ArticleDetailComponent }
 ];

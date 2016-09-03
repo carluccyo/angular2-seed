@@ -9,8 +9,7 @@ import { ArticlesVerticalComponent } from './articles-vertical.component';
       <articles-horizontal></articles-horizontal>
       <top-news-box></top-news-box>
       <articles-vertical></articles-vertical>
-    `,
-    directives: [ArticlesHorizontalComponent, TopNewsBoxComponent, ArticlesVerticalComponent]
+    `
 })
 export class ArticlesGridComponent implements OnInit, OnDestroy {
 

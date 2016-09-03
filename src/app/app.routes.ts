@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-
 import { About } from './about/about';
 import { Home } from './home/home';
 import { ItemListComponent } from './components/item-list/itemList.component';
@@ -11,10 +10,10 @@ import { RepoDetail } from './github/repo-detail/repo-detail';
 import { PagesRoutes } from './pages/pages.routes';
 import { ArticlesRoutes } from './components/articles/articles.routes.ts'
 
-export const rootRouterConfig : Routes = [
+export const rootRouterConfig: Routes = [
     ...PagesRoutes,
     ...ArticlesRoutes,
-    { path: '', redirectTo: 'home', terminal: true },
+    {path: '', redirectTo: 'home', pathMatch: 'full'},
     { path: 'dashboard', redirectTo: '/pages/dashboard' },
     { path: 'home', component: Home },
     { path: 'items', component: ItemListComponent },

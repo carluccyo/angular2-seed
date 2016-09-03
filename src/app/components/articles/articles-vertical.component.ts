@@ -11,7 +11,6 @@ import { ArticleVerticalComponent } from './article-vertical.component';
             <article-vertical [article] = "article" ></article-vertical>
           </div>
     `,
-    directives: [ArticleVerticalComponent],
     providers: [ArticlesVerticalService],
     styles: ['.m-t { margin-top: 5px } .article-box { border-top : 1px solid #ebebeb; padding-top : 10px; padding-bottom : 10px }']
 })
