@@ -7,7 +7,7 @@ import { Component, EventEmitter, Input, Output, OnInit, OnDestroy } from '@angu
 
       <div class="col-sm-8">
         <div class="row p-sm">
-          <img src="http://placehold.it/900x600" class="img-responsive">
+          <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=900%C3%97600&w=900&h=600" class="img-responsive">
         </div>
       </div>
 
