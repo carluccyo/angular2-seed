@@ -8,7 +8,7 @@ import { Logger, Level } from 'angular2-logger/core';
     providers: [Logger],
     template: require('to-string!./app.html'),
 })
-export class App implements OnInit {
+export class AppComponent implements OnInit {
 
     constructor(public logger: Logger) { }
 

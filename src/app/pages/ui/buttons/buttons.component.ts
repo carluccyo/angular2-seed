@@ -4,11 +4,7 @@ const BUTTONS_SELECTOR = 'buttons';
 
 @Component({
     selector: BUTTONS_SELECTOR,
-    template: require('to-string!./buttons.html'),
-    directives: [],
-    providers: [],
-    styleUrls: [],
-    pipes: []
+    template: require('to-string!./buttons.html')
 })
 
 export class Buttons implements OnInit, OnDestroy {
